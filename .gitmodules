@@ -1,0 +1,3 @@
+[submodule "wolfcrypt_rsa/wolfssl"]
+	path = wolfcrypt_rsa/wolfssl
+	url = https://github.com/wolfSSL/wolfssl
