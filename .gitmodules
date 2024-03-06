@@ -1,3 +1,6 @@
 [submodule "wolfcrypt_rsa/wolfssl"]
 	path = wolfcrypt_rsa/wolfssl
 	url = https://github.com/wolfSSL/wolfssl
+[submodule "mbedTLS_rsa/mbedtls"]
+	path = mbedTLS_rsa/mbedtls
+	url = https://github.com/Mbed-TLS/mbedtls
