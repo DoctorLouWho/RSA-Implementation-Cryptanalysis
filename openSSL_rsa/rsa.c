@@ -78,7 +78,11 @@ int main() {
         return 1;
     }
 
-    printf("Encrypted message hex: %x\n", encrypted);
+    printf("Encrypted message hex: ");
+    for(int i = 0; i < MESSAGE_LEN; i++) {
+        printf("%02x", encrypted[i]); // Print each byte as a two-digit hexadecimal number
+    }
+    printf("\n");
     printf("Encrypted message length = %d\n", encrypted_length);
 
     // Decrypt the message

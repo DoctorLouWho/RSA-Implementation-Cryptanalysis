@@ -64,7 +64,12 @@ int main(void) {
         return -1;
     }
 
-    printf("Encrypted Message hex: %x\n", ciphertext);
+    printf("Encrypted message hex: ");
+    for(int i = 0; i < MESSAGE_LEN; i++) {
+        printf("%02x", ciphertext[i]); // Print each byte as a two-digit hexadecimal number
+    }
+    printf("\n");
+
     printf("Encrypted Message len: %d\n", MESSAGE_LEN);
     unsigned char decrypted[MESSAGE_LEN]; // Ensure this buffer is large enough
 

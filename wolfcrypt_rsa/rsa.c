@@ -66,7 +66,12 @@ int main() {
 
     cipherLen = ret; // Length of the cipher text
 
-    printf("Encrypted message hex: %x\n", cipherText);
+    printf("Encrypted message hex: ");
+    for(int i = 0; i < BUFFER_SIZE; i++) {
+        printf("%02x", cipherText[i]); // Print each byte as a two-digit hexadecimal number
+    }
+    printf("\n");
+    
     printf("Encrypted message length: %d\n", BUFFER_SIZE);
     
 	/* Decrypt the message */
