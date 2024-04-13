@@ -66,7 +66,8 @@ int main() {
 
     cipherLen = ret; // Length of the cipher text
 
-    printf("Encryption successful!\n");
+    printf("Encrypted message hex: %x\n", cipherText);
+    printf("Encrypted message length: %d\n", BUFFER_SIZE);
     
 	/* Decrypt the message */
 	ret = wc_RsaPrivateDecrypt(cipherText, cipherLen, decryptedText, BUFFER_SIZE, &key);
@@ -77,7 +78,6 @@ int main() {
 
     plainLen = ret; // Length of the decrypted text
 
-    printf("Decryption successful!\n");
     printf("Decrypted text: %s\n", decryptedText);
 
     /* Clean up */

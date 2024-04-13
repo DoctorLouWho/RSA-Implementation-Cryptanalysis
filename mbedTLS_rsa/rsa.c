@@ -1,3 +1,11 @@
+/*
+ * This file runs a simple implementation of the RSA encryption/decryption of a message
+ * using the mbedTLS library
+ *
+ * Author: Felipe Marques Allevato
+ * Author: Nika Ghasemi Barmi
+ */
+
 #include "mbedtls/pk.h"
 #include "mbedtls/entropy.h"
 #include "mbedtls/ctr_drbg.h"
@@ -56,6 +64,8 @@ int main(void) {
         return -1;
     }
 
+    printf("Encrypted Message hex: %x\n", ciphertext);
+    printf("Encrypted Message len: %d\n", MESSAGE_LEN);
     unsigned char decrypted[MESSAGE_LEN]; // Ensure this buffer is large enough
 
     // Decrypt the message
